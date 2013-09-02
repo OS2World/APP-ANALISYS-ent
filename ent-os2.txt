@@ -1,0 +1,27 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: ent-os2.zip
+       Short Description: J. Walker's Ent (1988), os/2 v.  Checks file entropy.
+        Long Description: Random number test: checks compressibility, Chi-square distribution, mean, Monte Carlo Pi, and serial correlation coefficient. Public domain.
+      Proposed directory
+           for placement: /pub/os2/apps/analysis/
+
+               Your name: Walt Gregg (uploader)
+           Email address: walt@w-gregg.juneau.ak.us
+    Program contact name: John Walker (author)
+   Program contact email:
+             Program URL: http://www.fourmilab.ch/random/
+
+      Would you like the
+   contact email address
+    included in listings? no
+
+Operating System/Version: OS/2 Warp Connect 3, presumably 4; also MS-DOS.
+ Additional requirements: EMX Runtime (0.9d4)
+
+                Replaces: (none)
+
+
+
+

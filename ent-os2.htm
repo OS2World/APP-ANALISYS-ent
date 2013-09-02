@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for OS/2 (vers 1st May 2002), see www.w3.org">
+<title>John Walker's Ent (1998); os/2 version (2003)</title>
+</head>
+<body>
+<address><a href=
+"mailto:walt@w-gregg.juneau.ak.us">walt@w-gregg.juneau.ak.us</a><br>
+
+ January 2003</address>
+
+<h1>John Walter's <cite>Ent</cite> (1998); os/2 version (2003)</h1>
+
+<p><strong>Ent attempts to measure the entropy (randomness) of a
+random number stream (file)</strong>. The idea is to tell you if
+the data fails to meet certain tests of randomness. It reports
+compressibility as bits per byte and a percentage; Chi-square
+distribution percentage, arithmetic mean; Monte Carlo Pi error
+percentage; and serial correlation coefficient. Thus it can help
+tell you if data is nonrandom or biased. However, it
+<em>cannot</em> tell you if it contains <em>truly</em>
+unpredictable random numbers or if the stream is repeatable. See
+the <a href="ent.htm">Ent documentation</a> for details.</p>
+
+<p><strong>Why Ent?</strong>. There are much more extensive random
+number tests that can be run in OS/2 under 'Odin', but
+unfortunately 'Odin' won't run on Warp 3 fixpak 39 -- I tried. So
+here is the OS/2 version of Ent in case anyone else might find it
+useful.</p>
+
+<p><strong>I did not write Ent and am neither a mathematician nor a
+programmer</strong>. I have merely recompiled John Walker's
+<cite>Ent</cite> (1998) so it will run natively under OS/2 Warp
+connect 3 instead of in a DOS box. The OS/2 Ent does require the
+EMX runtime, which is available at no charge from <a href=
+"http://hobbes.nmsu.edu">Hobbes.nmsu.edu</a> as emxrt9d4.zip, or
+perhaps emxrt.zip. Ent is public domain.</p>
+
+<p><strong>More information</strong>. Not being a mathematician, I
+am not in a position to provide any meaningful answers to questions
+about Ent. One place to check for more information would be the
+place I found Ent: <a href=
+"http://www.fourmilab.ch">www.fourmilab.ch</a>, under the
+mathematics section. As to compiling programs, I am a complete
+novice.</p>
+
+<hr>
+You don't need to read or download anything below this line. I am
+just listing pretty much exactly what I did here in case anyone has
+any questions about how the new 'ent' was built. 
+<hr>
+<p>Ent was supplied as a DOS executable, which works under OS/2,
+but forces you to start a DOS box. But the program also includes
+the C-language source code and a 'makefile'. If you have a 'Make'
+utility and a C compiler, you can theoretically run 'Make', which
+should read the 'makefile' for instructions on how to recompile the
+source code on the current operating system. It's often not that
+easy. For example, I learned that 'makefile' is CaSe SeNSiTiVe and
+has to be 'makefile' or 'Makefile' and not 'MAKEFILE' in order to
+work. So if you unzip on a drive that uses UPPERCASE letters you
+may have trouble. So I re- unzipped random.zip (ent) on a longname
+drive, and then downloaded the minimal EMX development library:</p>
+
+<blockquote>
+<dl>
+<dt>emxdev1.zip</dt>
+
+<dd>EMX Development Tools, Part 1</dd>
+
+<dt>emxdev2.zip</dt>
+
+<dd>EMX Development Tools, Part 2</dd>
+
+<dt>emxrt9d4.zip</dt>
+
+<dd>EMX Runtime 0.9d(04)</dd>
+
+<dt>emxview.zip</dt>
+
+<dd>EMX Documentation in 'View' (OS/2 inf) format</dd>
+
+<dt>gnudev1.zip</dt>
+
+<dd>Gnu C Compiler, debugger, and tools, Part 1</dd>
+
+<dt>gnudev2.zip</dt>
+
+<dd>Gnu C Compiler, debugger, and tools, Part 2</dd>
+
+<dt>gnudoc.zip</dt>
+
+<dd>Gnu Documentation (textinfo sources, etc)</dd>
+
+<dt>gnuinfo.zip</dt>
+
+<dd>Gnu Info Program, etc.</dd>
+
+<dt>gnuview.zip</dt>
+
+<dd>Gnu Documentation in View (OS/2 inf) format</dd>
+</dl>
+</blockquote>
+
+and the Gnu 'Make' utility: 
+<blockquote>
+<dl>
+<dt>gettext-0_10_39-r2-bin.zip</dt>
+
+<dd>National language support</dd>
+
+<dt>make-3_79_2a1-bin.zip</dt>
+
+<dd>Make utility</dd>
+</dl>
+</blockquote>
+
+all available at no charge from Hobbes. After I installed them as
+directed in the downloads, typing INFO allowed access to the
+documentation with an EMACS interface not entirely unlike the
+ancient Perfect Writer. But the learning curve is steep. I also
+used the OS/2 'view' to look at some of the INF files, but to be
+truthful, just wanting to have an Ent for OS/2, I pretty much
+skipped the instructions, which are not for the faint of heart. 
+<p>I made one small change to the Ent 'makefile': The line starting
+'cc' should start 'gcc', since that's the compiler's name. I also
+changed entest.bat to entest.cmd and added a note of what it's for:
+Entest runs ent on entitle.gif to produce entest.bak, which should
+compare to entest.mas. Entest.mas is the same as the original
+except for having its line endings changed to DOS-OS/2 format and
+its EOF removed to facilitate the compare.</p>
+
+<p>With the makefile fixed, I just ran 'Make' and it gave no errors
+and produced a new 'Ent' file. Then, running 'Emxbind ent' produced
+an 'Ent.exe' file that worked as a native OS/2 executable file.
+This may not be the smallest or fastest compilation, but it works.
+Entest shows that it gives results identical to the original DOS
+executable, so I have looked no further, and am uploading it as-is
+for anyone else who might find it useful.</p>
+</body>
+</html>
+
