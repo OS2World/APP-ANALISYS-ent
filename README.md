@@ -10,7 +10,8 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* 
+* GCC
+* RC
 
 AUTHORS
 ===============
